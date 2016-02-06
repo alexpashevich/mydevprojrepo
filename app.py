@@ -83,6 +83,10 @@ def send_grant_img(path):
 def send_img(path):
     return send_from_directory('img', path)
 
+@app.route('/fonts/<path:path>')
+def send_font(path):
+    return send_from_directory('fonts', path)
+
 @app.route('/send-form/', methods=['POST'])
 def send_email():
     full_message = request.form['social'] + u"\nСообщение: " + request.form['message']

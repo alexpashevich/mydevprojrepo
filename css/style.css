@@ -734,18 +734,23 @@ ul.ftr-socialicons li a.print:hover {
   margin-top: 1;
   font-size: 1em;
 }
+.about-sets {
+  margin-bottom: 40px;
+}
 .about-wedo .inner-text {
   position: absolute;
+  font-size: 20px;
+  font-weight: 200;
   color: #ffffff;
   left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin-left: auto;
-  margin-top: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  padding: 200px 60px 200px 60px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 .about-wedo .inner-text a {
   color: #ffffff;
@@ -753,27 +758,6 @@ ul.ftr-socialicons li a.print:hover {
 .about-wedo .inner-text a:hover {
   color: #ffffff;
   text-decoration:none;
-}
-.circle {
-  background: #ffffff;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: max;
-  text-align: center;
-  color: white;
-  width: 100%;
-  padding-bottom:100%;
-  height:0;
-  position:relative;
-}
-.circle-caption {
-  display: block;
-  left: 0;
-  height: 1em;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -.5em;
 }
 .about-grant {
   padding: 1em 0em 1em 0em;
