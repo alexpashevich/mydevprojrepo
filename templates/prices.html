@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+{% block header %}
+<li><a href="/"><span data-hover="Главная">Главная</span></a></li>
+<li><a href="/grants/1"><span data-hover="База грантов">База грантов</span></a></li>
+<li><a class="active" href="/prices/">Наши услуги</a></li>
+<li><a href="/references/"><span data-hover='Отзывы'>Отзывы</span></a></li>
+<li><a href="/contact/"><span data-hover="Оставить заявку">Оставить заявку</span></a></li>
+{% endblock %}
+{% block content %}
+<!--banner start here-->
+<div class="banner-small">
+</div>
+<!--banner end here-->
+<div class="about">
+	<div class="container">
+		<div class="about-main">
+			<div class="about-top">
+				<h3>Пакеты услуг</h3>
+				<p>Для получения более подробной информации об интересующей вас услуге</p>
+				<p><a href="contact.html">свяжитесь с нами</a></p>
+			</div>
+			<div class="about-wedo">
+				<div class="col-md-4">
+					<img src="/img/ocean-small-1.jpg" alt="" class="img-responsive">
+						<div class="circle" id="step-1-default-image-box">
+						    <span class="circle-caption">1</span>
+						</div>
+					</img>
+					<!-- <div class="inner-text"> -->
+						<!-- <a href="#item-consultaion"><p>Консультация</p></a>
+						<a href="#item-cv"><p>Составление академического CV</p></a>
+						<a href="#item-letter"><p>Написание мотивационного или рекомендательного письма</p></a> -->
+					<!-- </div> -->
+					<!-- <img src="/img/ocean-small-1.jpg" alt="" class="img-responsive"> -->
+				</div>
+				<div class="col-md-4">
+					<h5>Нормал</h5>
+					<div class="inner-text">
+						<a href="#item-universities"><p>Подбор университетов и грантов</p></a>
+						<a href="#item-docs-edit"><p>Редактура пакета документов</p></a>
+					</div>
+					<img src="/img/ocean-small-2.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-4">
+					<h5>Пиздец</h5>
+					<!-- <div class="inner-text">
+						<p>Составление полного пакета документов</p>
+						<p>Полный цикл поступления</p>
+					</div> -->
+			        <div class="inner-text" style="border: dotted red 1px;">
+			            <a href="#item-docs"><p>Составление полного пакета документов</p></a>
+						<a href="#item-full"><p>Полный цикл поступления</p></a>
+			        </div>
+					<img src="/img/ocean-small-3.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-top">
+				<h3>Услуги и цены</h3>
+				<p>Для получения более подробной информации об интересующей вас услуге</p>
+				<p><a href="contact.html">свяжитесь с нами</a></p>
+			</div>
+			<div class="about-wedo" id="item-consultaion">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/meeting.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Консультация</h4>
+					<p>Вы сможете узнать ответы на все интересующие вас вопросы, а также получить исчерпывающую информацию по процедуре поступления. Во время консультации вы можете получить ответы на такие вопросы, как:</p>
+					<ul>
+						<li>критерии отбора в университеты и на стипендии;</li>
+						<li>стратегии, которые увеличат ваши шансы на поступление;</li>
+						<li>в каких странах возможно бесплатное образование;</li>
+						<li>как правильно выбрать ВУЗ;</li>
+						<li>как писать мотивационное и рекомендательное письмо;</li>
+						<li>как составить академическое CV;</li>
+						<li>как происходит подача документов в вузы;</li>
+						<li>что такое транскриптсы и где их взять;</li>
+						<li>какие экзамены нужно сдать;</li>
+						<li>стоимость проживания в странах Европы;</li>
+						<li>как получить финансовую поддержку (стипендии, гранты, assistantships, fellowships).</li>
+					</ul>
+					<h5>Стоимость: €10</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/strategy.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Составление индивидуальной стратегии поступления</h4>
+					<p>Разработка индивидуальной стратегии поступления с учётом вашей персональной ситуации, возможностей, опыта и сроков поступления. Мы подскажем, какие страны и ВУЗы лучше выбрать и какова вероятность получить финансирование. Мы составим четкие рекомендации, как действовать дальше, чтобы максимально увеличить ваши шансы на поступление.</p>
+					<h5>Стоимость: €30</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-universities">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/harvard.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Подбор университетов</h4>
+					<p>На основании заполненной анкеты и общения с вами мы подготовим список из 10 университетов, которые подходят именно вам. Для выбора университетов будет использована информация о ваших научных и творческих интересах, целях обучения, пожеланиях о стране и городе обучения, а также о ваших текущих возможностях. Вам будет доступна полная информация о программе обучения, принимающем университете и городе, требуемых документах, сроках подачи и ответа, а также другие важные параметры, на основе которых вы сможете сделать свой выбор.</p>
+					<h5>Стоимость: €50</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-grants">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/money.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Подбор грантов и стипендий</h4>
+					<p>Мы подберем для вас варианты полного или частичного покрытия стоимости обучения, а также проживания в выбранной вами стране. Возможно, вам не придётся тратить тысячи евро на учебу, а удастся получить грант. Вам будет предоставлена полная информация об условиях стипендии, предоставляемом финансовом покрытии, требуемых для заявки документах, сроках подачи и ответа и других важных подробностях.</p>
+					<h5>Стоимость: €50</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-letter">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/notes.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Написание мотивационного или рекомендательного письма</h4>
+					<p>Мы напишем за вас мотивационное письмо, руководствуясь вопросами анкеты и фактах из вашей биографии. Письмо будет написано с учётом требований конкретной программы, её целей и желаемых кандидатов.</p>
+					<h5>Стоимость: €50</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/typewriter.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Редактура мотивационного или рекомендательного письма</h4>
+					<p>Мотивационное или рекомендательное письмо является одним из важнейших документов, который может сыграть определяющую роль при выборе кандидатов. Мы можем помочь вам сделать из вашего письма то, что максимально ***</p>
+					<h5>Стоимость: €25</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-cv">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/resume.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Составление академического CV</h4>
+					<p>Академическое CV зачастую отличается от CV, которые требуются при приёме на работу. Мы составим документ, который заставит потенциальную приёмную комиссию обратить на вас внимание. ***</p>
+					<h5>Стоимость: €30</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-docs">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/plan.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Составление полного пакета документов</h4>
+					<p>Как известно, большинство вузов требуют одни и те же документы для поступления. Мы составим для вас полный пакет документов, на основании которого вы сможете претендовать на поступление в выбранные вузы. В данную услугу входит составление 2 рекомендательных писем, мотивационного письма и академического CV, перевод транскриптсов, а так же подготовка других требуемых документов.</p>
+					<h5>Стоимость: €100 ???</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/edit1.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Лит перевод</h4>
+					<p>Текст.</p>
+					<h5>Стоимость: €60</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-docs-edit">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/documents.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Редактура пакета документов</h4>
+					<p>Мы проверим ваши документы и сделаем так, чтобы вы имели максимальные шансы на поступление. В данную услугу входит редактура 2 рекомендательных писем, одного мотивационного письма и академического CV, проверка перевода транскриптсов, а также проверка соответствия ваших документах требованиям университета.</p>
+					<h5>Стоимость: €60</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<br>
+			<div class="about-wedo" id="item-full">
+				<div class="col-md-4 about-top-img">
+					<img src="/img/relax.jpg" alt="" class="img-responsive">
+				</div>
+				<div class="col-md-8 about-wedo-right">
+					<h4>Полный цикл поступления</h4>
+					<p>Если вы любите, когда всю работу делают для вас, то вы попали по адресу. На основании общения с вами и заполненной анкеты мы подготовим все требуемые документы (рекомендательные письма от имени ваших профессоров, мотивационное письмо, академическое CV, переведённые транскриптсы и другие требуе, а также дадим вам пошаговые инструкции по получения оставшихся документов, которые мы не можем собрать физически (экзамен по языку и формальные документы из вашего университета). Мы возьмём на себя всю такую работу, как общение с иностранным университетом и онлайн подача документов.</p>
+					<h5>Стоимость: €200</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

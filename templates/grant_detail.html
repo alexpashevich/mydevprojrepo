@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block header %}
+<li><a href="/"><span data-hover="Главная">Главная</span></a></li>
+<li><a class="active" href="/grants/1"><span data-hover="База грантов">База грантов</span></a></li>
+<li><a href="/prices/"><span data-hover='Наши услуги'>Наши услуги</span></a></li>
+<li><a href="/references/">Отзывы</a></li>
+<li><a href="/contact/"><span data-hover="Оставить заявку">Оставить заявку</span></a></li>
+{% endblock %}
+
+{% block content %}
+<!--banner start here-->
+<div class="banner-small">
+</div>
+<!--banner end here-->
+<div class="about">
+    <div class="container">
+        <div class="about-main">
+            <div class="about-top about-grant-detailed">
+                <h3>{{ grant[1] }}</h3>
+                {{ grant[3] }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

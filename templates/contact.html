@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block header %}
+<li><a href="/"><span data-hover="Главная">Главная</span></a></li>
+<li><a href="/grants/1"><span data-hover="База грантов">База грантов</span></a></li>
+<li><a href="/prices/"><span data-hover='Наши услуги'>Наши услуги</span></a></li>
+<li><a href="/references/"><span data-hover="Отзывы">Отзывы</span></a></li>
+<li><a class="active" href="/contact/">Оставить заявку</a></li>
+{% endblock %}
+
+{% block content %}
+<script language="JavaScript" type="text/javascript">
+function validateForm() {
+    var name = $("#contact-form-name").val();
+    var email = $("#contact-form-email").val();
+    var message = $("#contact-form-message").val();
+    if (name == null || name == "" || name == "Как вас зовут") {
+    	$("#error-message").text("Укажите как вас зовут");// alert("Пожалуйста укажите как вас зовут");
+    	$("#error-message").show();
+    	$("#contact-form-name").css("border", "2px solid #cc5543");
+    	$("#contact-form-name").focus(function() {
+    		$("#contact-form-name").css("border", "");
+    	});
+    	setTimeout(function() {
+		    $('#error-message').fadeOut('slow');
+		}, 1000);
+    	return false;
+    }
+    if (email == null || email == "" || email == "E-mail") {
+    	// alert("Пожалуйста введите ваш e-mail");
+    	$("#error-message").text("Введите ваш e-mail");
+    	$("#error-message").show();
+    	$("#contact-form-email").css("border", "2px solid #cc5543");
+    	$("#contact-form-email").focus(function() {
+    		$("#contact-form-email").css("border", "");
+    	});
+    	setTimeout(function() {
+		    $('#error-message').fadeOut('slow');
+		}, 1000);
+    	return false;
+    }
+    if (message == null || message == ""|| message == "Укажите интересующую вас услугу или вопрос") {
+    	// alert("Пожалуйста укажите интересующую вас услугу");
+    	$("#error-message").text("Введите текст сообщения");
+    	$("#error-message").show();
+    	$("#contact-form-message").css("border", "2px solid #cc5543");
+    	$("#contact-form-message").focus(function() {
+    		$("#contact-form-message").css("border", "");
+    	});
+    	setTimeout(function() {
+		    $('#error-message').fadeOut('slow');
+		}, 1000);
+    	return false;
+    }
+}
+</script>
+<!--banner start here-->
+<div class="banner-small">
+</div>
+<!--banner end here-->
+<!--contact start here-->
+<div class="contact">
+	<div class="container">
+		<div class="contact-main">
+			<div class="contact-top">
+				<h3>Заявка</h3>
+				<p>Если вы хотите заказать одну из наших услуг или задать нам интересующие вас вопросы, оставьте заявку, и мы обязательно свяжемся с вами.</p>
+			</div>
+			<form method="post" id="contact-form" action="/send-form/" class="contact-bottom" onsubmit="return validateForm()">
+				<div class="col-md-4 con-name">
+					<input type="text" id="contact-form-name" name="name" value="Как вас зовут" onfocus="if (this.value == 'Как вас зовут') {this.value='';}" onblur="if (this.value == '') {this.value ='Как вас зовут';}">
+				</div>
+				<div class="col-md-4 con-name">
+				    <input type="text" id="contact-form-email" name="email" value="E-mail" class="no-mar" onfocus="if (this.value == 'E-mail') {this.value='';}" onblur="if (this.value == '') {this.value ='E-mail';}">
+				</div>
+				<div class="col-md-4 con-name">
+				    <input type="text" id="contact-form-social" name="social" value="Ссылка на соцсеть" onfocus="if (this.value == 'Ссылка на соцсеть') {this.value='';}" onblur="if (this.value == '') {this.value ='Ссылка на соцсеть';}">
+				</div>
+				<textarea id="contact-form-message" name="message" onfocus="if (this.value == 'Укажите интересующую вас услугу или вопрос') {this.value='';}" onblur="if (this.value == '') {this.value ='Укажите интересующую вас услугу или вопрос';}">Укажите интересующую вас услугу или вопрос</textarea>
+				<input type="submit" value="Отправить">
+				<span class="contact-error-message" id="error-message">Заполните поле</span>
+			</form>
+		</div>
+	</div>
+</div>
+<!--contact end here-->
+{% endblock %}

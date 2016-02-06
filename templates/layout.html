@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Бесплатое образование в Европе</title>
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+</script>
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+<!-- Website icon -->
+<link rel="shortcut icon" href="/img/globe-icon.png">
+<!-- start-smoth-scrolling -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".scroll").click(function(event){     
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+            });
+    </script>
+</head>
+<body>
+<!-- //end-smoth-scrolling -->
+<!--header start here-->
+<div class="header">
+    <div class="container">
+        <div class="header-main">
+             <div class="logo">
+                <h1><a href="/">StudyAbroad<span class="logo-clr">Dream</span></a></h1>
+                 <p>Консультационная поддержка поступающим за границу</p>
+             </div>
+             <div class="head-right">
+               <div class="top-nav">
+                    <ul class="res">
+                        {% block header %}
+                        <li><a class="active" href="/">Главная</a></li>
+                        <li><a href="/grants/1"><span data-hover="База грантов">База грантов</span></a></li>
+                        <li><a href="/prices/"><span data-hover='Наши услуги'>Наши услуги</span></a></li>
+                        <li><a href="/references/"><span data-hover="Отзывы">Отзывы</span></a></li>
+                        <li><a href="/contact/"><span data-hover="Оставить заявку">Оставить заявку</span></a></li>
+                        {% endblock %}
+                    <div class="clearfix"> </div>
+                    </ul>
+
+                <!-- script-for-menu -->
+                             <script>
+                               $( "span.menu" ).click(function() {
+                                 $( "ul.res" ).slideToggle( 300, function() {
+                                 // Animation complete.
+                                  });
+                                 });
+                            </script>
+            <!-- /script-for-menu -->
+              </div>
+            <div class="clearfix"> </div>
+           </div>
+           <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--header end here-->
+{% block content %}
+{% endblock %}
+<link rel="stylesheet" href="css/swipebox.css">
+    <script src="js/jquery.swipebox.min.js"></script> 
+        <script type="text/javascript">
+            jQuery(function($) {
+                $(".swipebox").swipebox();
+            });
+</script>
+<!--footer star here-->
+<div class="footer">
+    <div class="foter-bottom">
+        <p class="footer-copyrts">Inspired by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+    </div>
+</div>
+<!--footer end here-->
+</body>
+</html>

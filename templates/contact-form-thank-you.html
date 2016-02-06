@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block header %}
+<li><a href="/"><span data-hover="Главная">Главная</span></a></li>
+<li><a href="/grants/1"><span data-hover="База грантов">База грантов</span></a></li>
+<li><a href="/prices/"><span data-hover='Наши услуги'>Наши услуги</span></a></li>
+<li><a href="/references/"><span data-hover="Отзывы">Отзывы</span></a></li>
+<li><a class="active" href="/contact/">Оставить заявку</a></li>
+{% endblock %}
+
+{% block content %}
+<!--banner start here-->
+<div class="banner-small">
+</div>
+<!--banner end here-->
+<!--contact start here-->
+<div class="contact">
+    <div class="container">
+        <div class="contact-main">
+            <div class="contact-top">
+                <h3>Спасибо!</h3>
+                <p>Ваше сообщение было успешно отправлено. Наши специалисты свяжутся с вами в ближайшее время, используя указанную вами ссылку на соцсеть или электронную почту.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contact end here-->
+{% endblock %}

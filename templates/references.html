@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block header %}
+<li><a href="/"><span data-hover="Главная">Главная</span></a></li>
+<li><a href="/grants/1"><span data-hover="База грантов">База грантов</span></a></li>
+<li><a href="/prices/"><span data-hover='Наши услуги'>Наши услуги</span></a></li>
+<li><a class="active" href="/references/">Отзывы</a></li>
+<li><a href="/contact/"><span data-hover="Оставить заявку">Оставить заявку</span></a></li>
+{% endblock %}
+
+{% block content %}
+<!--banner start here-->
+<div class="banner-small">
+</div>
+<!--banner end here-->
+<div class="about">
+	<div class="container">
+		<div class="about-main">
+			<div class="about-top">
+				<h3>Что говорят другие</h3>
+				<p>Вы можете узнать <a href="http://vk.com/studyabroaddream">в нашей группе на vk.com.</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

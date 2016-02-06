@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block header %}
+<li><a href="/"><span data-hover="Главная">Главная</span></a></li>
+<li><a class="active" href="/grants/1">База грантов</a></li>
+<li><a href="/prices/"><span data-hover='Наши услуги'>Наши услуги</span></a></li>
+<li><a href="/references/"><span data-hover="Отзывы">Отзывы</span></a></li>
+<li><a href="/contact/"><span data-hover="Оставить заявку">Оставить заявку</span></a></li>
+{% endblock %}
+{% block content %}
+<!--banner start here-->
+<div class="banner-small">
+</div>
+<!--banner end here-->
+<div class="about">
+	<div class="container">
+		<div class="about-top">
+				<h3>Стипендии и гранты</h3>
+				<p>Мы собрали информацию о грантах для обучения на программах разного уровня, предоставляющих полное и частичное покрытие. Мы приложим максимум усилий, чтобы эта база пополняялась как можно чаще.</p>
+			</div>
+			{% for grant in grants %}
+				<div class="about-wedo about-grant">
+					<div class="col-md-4 about-top-img">
+						<img src={{ "/grants-img/" + grant[5] }} alt="" class="img-responsive">
+					</div>
+					<div class="col-md-8 about-wedo-right">
+						<a href ={{ "/grants-detailed/" + grant[0]|string }}><h4>{{ grant[1] }}</h4></a>
+						{{ grant[2] }}
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			{% endfor %}
+	</div>
+</div>
+{% endblock %}
