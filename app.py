@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from flask import Flask, render_template, request
 from flask import send_from_directory, g, redirect
 import sqlite3
@@ -83,7 +85,7 @@ def send_img(path):
 
 @app.route('/send-form/', methods=['POST'])
 def send_email():
-    full_message = request.form['social'] + "\nСообщение: " + request.form['message']
+    full_message = request.form['social'] + u"\nСообщение: " + request.form['message']
     msg = Message(subject="[StudyAbroadDream] Message from " + request.form['name'],
                   body=full_message,
                   sender=request.form['email'],
