@@ -1,4 +1,4 @@
-/*--
+--
 Author: W3layouts
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -15,11 +15,11 @@ html, body{
 }
 @font-face {
     font-family: 'DosisRegular';
-    src:url(../fonts/Dosis-Regular-webfont.ttf) format('truetype');
+    src:url(/fonts/Dosis-Regular-webfont.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'SintonyRegular';
-    src:url(../fonts/Sintony-Regular-webfont.ttf) format('truetype');
+    src:url(/fonts/Sintony-Regular-webfont.ttf) format('truetype');
 }
 a {
   color: #cc5543; /* or #e05c5c?  */
@@ -31,6 +31,10 @@ a:hover {
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
+}
+a:visited, a:link, a:active {
+  color: #cc5543;
+  text-decoration: none;
 }
 /*--header start here--*/
 .header {
@@ -755,10 +759,17 @@ ul.ftr-socialicons li a.print:hover {
 .about-wedo .inner-text a {
   color: #ffffff;
 }
-.about-wedo .inner-text a:hover {
+.about-wedo .inner-text a:hover,
+.about-wedo .inner-text a:visited,
+.about-wedo .inner-text a:link,
+.about-wedo .inner-text a:active {
   color: #ffffff;
   text-decoration:none;
 }
+/*.about-wedo .inner-text a:active {*/
+  /*color: #ffffff;*/
+  /*text-decoration:none;*/
+/*}*/
 .about-grant {
   padding: 1em 0em 1em 0em;
 }
@@ -1768,4 +1779,4 @@ span.glyphicon.glyphicon-hourglass {
   padding: 0 10px;
 }
 }
-/*--media quries end here--*/
+/*--media quries end here--
