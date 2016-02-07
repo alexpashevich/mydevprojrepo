@@ -8,7 +8,8 @@ from flask_mail import Mail, Message
 app = Flask(__name__, static_url_path='')
 DATABASE = 'db.sqlite3'
 app.config.update(dict(
-    DEBUG = True,
+    DEBUG = False,
+    # DEBUG = True,
     MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT = 587,
     MAIL_USE_TLS = True,
@@ -98,5 +99,5 @@ def send_email():
     return render_template('contact-form-thank-you.html')
 
 if __name__ == '__main__':
-    app.debug = True
+    # app.debug = True
     app.run()
